@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="nexus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Soil Analytics</title>
+
+    <style>
+            * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+        body {
+        background-color: #f5f7fa;
+        }
+
+        /* nav bar section-1*/
+        .navbar{
+            background-color: #174e32;
+            padding: 2px;
+            width: 100vw;
+        }
+        .logo{
+            border-radius: 10px;
+            padding: 3px;
+        }
+        .logo:hover{
+            border: solid 2px white;
+        }
+        .user{
+            font-size: 25px;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            padding: 2px;
+        }
+
+        /* Main */
+        .main {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+        }
+
+        header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        }
+        header h1 {
+        color: #174e32;
+        text-decoration: underline 2px #174e32;
+        }
+
+        /* Dashboard cards */
+        .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        }
+
+        .card {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        cursor: pointer;
+        transition: 0.3s;
+        }
+
+        .card:hover {
+        transform: translateY(-5px);
+        }
+
+        .card h3 {
+        color: #174e32;
+        margin-bottom: 10px;
+        }
+
+        .ai-box {
+        margin-top: 25px;
+        padding: 20px;
+        background-color: #eaf5ee;
+        border-radius: 15px;
+        }
+
+        .ai-box h3 { color: #228b5f; }
+
+        /* footer */
+        .footer-text{
+            margin-top: 20px;
+            background-color: #174e32;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- header -->
+    <header id="section1">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="https://res.cloudinary.com/dswnjw2h1/image/upload/v1762697510/logo.jpg_zm7bka.png" alt="" class="logo" height="50px" width="120px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Dashboards</a>
+                <a class="nav-link" href="#">About Nexus</a>
+                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="#"><i class="fa-regular fa-circle-user user"></i>User</a>
+                <!-- <a class="nav-link" href="#"><p class="user"><i class="fa-regular fa-circle-user"></i>User</p></a> -->
+            </div>
+        </div>
+    </nav>
+
+    </header>
+
+    <!--main-->
+    <div class="main">
+        <header>
+            <h1>Soil Data</h1>
+        </header>
+
+        <div class="mb-4">
+            <h2>Physical Properties</h2>
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Soil Health</h3>
+                    <p>Score: <b>82</b> / 100</p>
+                </div>
+
+                <div class="card">
+                    <h3>Moisture Level</h3>
+                    <p>35%</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>Chemical Properties</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>pH</h3>
+                    <p>Value: <b>7</b> / 14</p>
+                    <p>It is in <b>Neutral</b></p>
+                </div>
+
+                <div class="card">
+                    <h3>Organic Matter</h3>
+                    <p>35%</p>
+                </div>
+
+                <div class="card">
+                    <h3>Nutrient Content</h3>
+                    <p>Nitrate- <b>2</b>%</p>
+                    <p>Phosphate- <b>2</b>%</p>
+                    <p>Potash- <b>4</b>%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-box">
+            <h3>AI Crop Recommendation</h3>
+            <p>Based on current conditions, <b>Maize 🌽</b> and <b>Groundnut 🥜</b> are suitable for your field.</p>
+        </div>
+
+        <!-- footer -->
+        <footer id="section3">
+            <div class="footer-text">
+                <p class="text-sm mb-2">Contact us: info@AgriSense.org</p>
+                <p class="text-sm">Powered by the Agri Sense Nexus Approach | &copy; 2025 SmartFarm. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
