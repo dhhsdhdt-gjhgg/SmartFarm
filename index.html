@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="nexus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Smart Farm</title>
+
+    <style>
+        /* body */
+body{
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* nav bar section-1*/
+.navbar{
+    background-color: #174e32;
+    padding: 2px;
+}
+.logo{
+    border-radius: 10px;
+    padding: 3px;
+}
+.logo:hover{
+    border: solid 2px white;
+}
+.user{
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 2px;
+}
+
+/* carousels section-2-1*/
+#carouselExampleFade{
+    margin: 40px;
+    border-radius: 20px;
+}
+.carousel-main-heading{
+    color: #174e32;
+    text-align: center;
+    text-decoration: underline 2px #174e32;
+}
+.carousel-heading{
+    font-size: 45px;
+}
+.d-block{
+    height: 60vh;
+    width: 70vw;
+    background-color: #174e32;
+    color: white;
+    border-radius: 50px;
+}
+@media (900px<=width<=1300px){
+    .d-block{
+        height: 30vh;
+    }
+    .carousel-heading{
+        font-size: 35px;
+    }
+}
+@media (576px<=width<=920px){
+    .d-block{
+        height: 25vh;
+    }
+    .carousel-heading{
+        font-size: 28px;
+    }
+}
+@media (width<=800px){
+    .d-block{
+        height: 20vh;
+    }
+    .carousel-heading{
+        font-size: 18px;
+    }
+}
+@media (width<=567px){
+    .d-block{
+        height: 25vh;
+        width: 100vw;
+        border-radius: 10px;
+    }
+    .carousel-heading{
+        font-size: 16px;
+    }
+}
+
+/* card section-2-2*/
+.row{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+.dash-board-heading{
+    color: #174e32;
+    text-decoration: underline 2px #174e32;
+}
+.hr-1{
+    width: 90vw;
+    border: solid 1px rgb(0, 0, 0, 0.5);
+}
+.card{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 8px;
+}
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+@media (width>=1200px){
+    .card{
+        max-width: 20vw;
+    }
+}
+.card-head{
+    font-weight: bold;
+    color:#174e32;
+}
+.symbol{
+    font-size: 26px;
+}
+.card-para{
+    color: rgb(75, 85, 99);
+}
+.card-button{
+    padding: 8px 60px 8px 60px ;
+    background-color: white;
+    color: white;
+}
+.card-button:hover{
+    color: white;
+    background-color: #228b5f;
+}
+.card-button-div{
+    text-align: center;
+}
+.symbol-red{
+    font-size: 26px;
+    color: red;
+}
+.card-button-red{
+    padding: 8px 60px 8px 60px ;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.7);
+}
+.card-button-red:hover{
+    color: white;
+    background-color: rgba(255, 0, 0);
+}
+
+/*info card*/
+.info-card{
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 80px;
+    padding: 20px 20px 40px 20px;
+    border-radius: 10px;
+}
+.info-card-head{
+    color: #174e32;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.hr-2{
+    width: 95%;
+    border: solid 1px rgb(0, 0, 0, 0.2);
+}
+.info-card-para{
+    color: rgb(75, 85, 99);
+}
+@media (width<=450) {
+    .info-card-head{
+        font-size: 15px;
+    }
+}
+
+/* Fixed Bot Icon */
+  .ai-bot {
+    position: fixed;      /* stays in place when scrolling */
+    bottom: 20px;         /* distance from bottom */
+    right: 20px;          /* distance from right side */
+    width: 70px;
+    height: 70px;
+    background-color: #16a34a; /* green */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    cursor: default;
+    z-index: 1000;
+}
+/* Optional: Add hover animation */
+  .ai-bot:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+/* footer */
+.footer-text{
+    background-color: #174e32;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+html {
+    scroll-behavior: smooth;
+}
+    </style>
+
+</head>
+<body id="Home">
+
+  <!-- header -->
+  <header id="section1">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="https://res.cloudinary.com/dswnjw2h1/image/upload/v1762697510/logo.jpg_zm7bka.png" alt="" class="logo" height="50px" width="120px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#cards">Dashboards</a>
+                <a class="nav-link" href="#about">About Nexus</a>
+                <a class="nav-link" href="#contact">Contact Us</a>
+                <a class="nav-link" href="/user.html"><i class="fa-regular fa-circle-user user"></i>User</a>
+                <!-- <a class="nav-link" href="#"><p class="user"><i class="fa-regular fa-circle-user"></i>User</p></a> -->
+            </div>
+        </div>
+    </nav>
+
+  </header>
+
+  <!-- main -->
+  <main id="main">
+
+    <!-- carousel -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+        <h1 class="carousel-main-heading">Suggetions</h1>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-block w-100 d-flex flex-row justify-content-center align-items-center"><h1 class="carousel-heading">🌾 Empowering Farmers with Smart Insights -<br> Monitor your soil, crops, and weather in real time.</h1></div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-block w-100 d-flex flex-row justify-content-center align-items-center"><h1 class="carousel-heading">🌱 Grow Smarter, Not Harder -<br> Sustainable farming powered by technology.</h1></div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-block w-100 d-flex flex-row justify-content-center align-items-center"><h1 class="carousel-heading">🚜 From Data to Harvest Make<br> every decision count with precision agriculture.</h1></div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- cards -->
+    <container id="cards" class="container">
+        <div class="row justify-content-center">
+
+            <div class="dash-board-heading col-12"><h1>Dashboards & Tools</h1></div>
+
+            <hr class="hr-1">
+
+            <div class="card card-1 col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                <div class="crad-text d-flex justify-content-between mb-3">
+                    <h3 class="card-head">Soil Data</h3>
+                    <i class="symbol fa-solid fa-seedling"></i>
+                </div>
+                <p class="card-para">View drone imagery and crop health analysis (NDVI reports).</p>
+                <div class="card-button-div">
+                    <a href="/soil.html"><button class="card-button btn">View Soil Analytics</button></a>
+                </div>
+            </div>
+
+            <div class="card card-2 col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                <div class="crad-text d-flex justify-content-between mb-3">
+                    <h3 class="card-head">Weather</h3>
+                    <i class="symbol fa-solid fa-cloud-sun"></i>
+                </div>
+                <p class="card-para">Hyper-local 7-day forecast for optimal irrigation and planning.</p>
+                <div class="card-button-div">
+                    <a href="/weather.html"><button class="card-button btn">Check Outlook</button></a>
+                </div>
+            </div>
+
+            <div class="card card-3 col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                <div class="crad-text d-flex justify-content-between mb-3">
+                    <h3 class="card-head">Field Monitor</h3>
+                    <i class="symbol fa-solid fa-camera-retro"></i>
+                </div>
+                <p class="card-para">View drone imagery and crop health analysis (NDVI reports).</p>
+                <div class="card-button-div">
+                    <a href="/field.html"><button class="card-button btn">Access Imagery</button></a>
+                </div>
+            </div>
+
+            <div class="card card-4 col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                <div class="crad-text d-flex justify-content-between mb-3">
+                    <h3 class="card-head">Pest & Disease</h3>
+                    <i class="symbol-red fa-solid fa-bug"></i>
+                </div>
+                <p class="card-para">AI-driven alerts for potential insect and disease threats.</p>
+                <div class="card-button-div">
+                    <a href="/insect.html"><button class="card-button-red btn">View Alerts (2)</button></a>
+                </div>
+            </div>
+
+        </div>
+    </container>
+
+    <!-- info-card -->
+    <div id="about">
+        <div class="info-card">
+            <h1 class="info-card-head">Why AgreSense?</h1>
+            <hr class="hr-2">
+            <p class="info-card-para">AgriSense is designed to help farmers make smart, data-driven decisions instead of relying only on guesswork. It continuously collects information from the soil, weather, and crops to understand what your field really needs.</p>
+        </div>
+
+        <div class="info-card">
+            <h1 class="info-card-head">🤖 How AI Helps You!</h1>
+            <hr class="hr-2">
+            <p class="info-card-para">Our AI analyzes all this data — like soil moisture, nutrients, temperature, and rainfall — to give personalized suggestions such as:</p>
+            <ul>
+                <li class="info-card-list">When to irrigate or fertilize your crops</li>
+                <li class="info-card-list">Which nutrients your soil is lacking</li>
+                <li class="info-card-list">How to improve yield and reduce waste</li>
+            </ul>
+            <p class="info-card-para">In simple words, AgriSense uses AI to become your digital farming assistant, guiding you at every step for better productivity and sustainability.</p>
+        </div>
+    </div>
+
+    <!-- Fixed AI Bot Icon -->
+    <div class="ai-bot" title="AgriSense AI Bot">🤖</div>
+
+  </main>
+
+  <footer id="contact">
+    <div class="footer-text">
+        <p class="text-sm mb-2">Contact us: info@AgriSense.org</p>
+        <p class="text-sm">Powered by the Agri Sense Nexus Approach | &copy; 2025 SmartFarm. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
